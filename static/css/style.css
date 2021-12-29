@@ -1,18 +1,14 @@
-/* body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-    line-height: 30px;
-    color: #777;
-    background: transparent;
-  } */
+  body {
+    overflow:hidden;
+    line-height: 5px;
+  }
   
    .input-box {
     min-width: 300px;
     max-width: 500px;
     margin: 50px auto;
     position: relative;
-    padding: 20px;
+    padding: 5px 80px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
   .input-form {
@@ -24,11 +20,14 @@
     font-size: 30px;
     color: #719e77;
   }
+
   .data-input-area {
     display: grid;
-    grid-template-columns: 50% 50%;
+    /* grid-template-columns: 50% 50%; */
     margin: 10px 0px;
+    height: 35px;
   }
+
   .data-input-area > label {
     font-size: 14px;
   }
@@ -36,12 +35,13 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
   .btn-submit {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
-    color: #719e77;
-    background-color: #2f2f2f;
+    color: #f1f8f8;
+    background-color: #8f60e7;;
     padding: 5px;
     width: 100%;
+    height: 30px;
     margin: 20px 0px;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -56,8 +56,27 @@
   .result-area {
     display: block;
     font-weight: bold;
-    background-color: #f2f2f2;
-    color: #1f1f1f;
+    color: #506cb9;
+    margin-top: 25px;
+    margin-bottom: 10px;
     min-height: 20px;
     text-align: center;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 25%;
+    line-height: 30px;
+  }
+
+  .reason-message {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 18px;
   }

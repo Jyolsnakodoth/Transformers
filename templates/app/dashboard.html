@@ -31,7 +31,8 @@
 		        <h2 class="input-header">Details</h2>
 		        <div class="data-input-area">
 		          <label>Day of delivery</label>
-		          <select name="day">
+		          <select name="day" required>
+					<option value="" disabled selected>Select your option</option>
 		            <option value="1">Monday</option>
 		            <option value="2">Tuesday</option>
 		            <option value="3">Wednesday</option>
@@ -43,7 +44,8 @@
 		        </div>
 		        <div class="data-input-area">
 		          <label>Delivery agent feedback</label>
-		          <select name="feedback">
+		          <select name="feedback" required>
+					<option value="" disabled selected>Select your option</option>
 		            <option value="1">1</option>
 		            <option value="2">2</option>
 		            <option value="3">3</option>
@@ -53,7 +55,8 @@
 		        </div>
 		        <div class="data-input-area">
 		          <label>Delivery agent's leave record</label>
-		          <select name="leave_record">
+		          <select name="leave_record" required>
+					<option value="" disabled selected>Select your option</option>
 		            <option value="10">Never</option>
 		            <option value="11">Rarely</option>
 		            <option value="12">Occasionaly</option>
@@ -61,28 +64,32 @@
 		        </div>
 		        <div class="data-input-area">
 		          <label>Delivery agent's shift</label>
-		          <select name="shift">
+		          <select name="shift" required>
+					<option value="" disabled selected>Select your option</option>
 		            <option value="13">Day</option>
 		            <option value="14">Night</option>
 		          </select>
 		        </div>
 		        <div class="data-input-area">
 		          <label>Vehicle condition</label>
-		          <select name="vehicle_condition">
+		          <select name="vehicle_condition" required>
+					<option value="" disabled selected>Select your option</option>
 		            <option value="15">Good</option>
 		            <option value="16">Bad</option>
 		          </select>
 		        </div>
 		        <div class="data-input-area">
 		          <label>Route traffic condition</label>
-		          <select name="traffic_condition">
+		          <select name="traffic_condition" required>
+					<option value="" disabled selected>Select your option</option>
 		            <option value="15">Good</option>
 		            <option value="16">Bad</option>
 		          </select>
 		        </div>
 		        <div class="data-input-area">
 		          <label>Road condition</label>
-		          <select name="road_condition">
+		          <select name="road_condition" required>
+					<option value="" disabled selected>Select your option</option>
 		            <option value="15">Good</option>
 		            <option value="16">Bad</option>
 		          </select>
@@ -90,7 +97,15 @@
 		        <button class="btn-submit" id="submitButton">Submit</button>
 		      </div>
 		</form>
+		<h2 class="input-header">Expected Delivery</h2>
 		<div class="result-area" id="result">{{result}}</div>
+		{% if reason.is_late %}
+			<div class= "reason-message"> <p style="color:red;">{{reason.value}}</p> </div>
+		{% else %}
+			<div class= "reason-message"> <p style="color:green;">{{reason.value}}</p> </div>
+		{% endif %}
 	</div>
-
+	<script>
+		
+    </script>
 {% endblock content %}
