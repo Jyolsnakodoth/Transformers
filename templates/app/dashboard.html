@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Dashboard
+{% endblock %}
+
+{% block content %}
+
+	{% if messages %}
+
+	    {% for message in messages %}
+
+		<!--Panel-->
+		<div class="card border-success mb-3">
+		    <div class="card-header text-danger">
+		        <p class="card-title">{{ message }}</p>
+		    </div>
+		</div>
+		<!--/.Panel-->
+	    
+	    {% endfor %}
+
+	{% endif %}
+
+	<h1 class="mt-5 text-center">Welcome {{ request.user }}</h1>
+
+	<div class="input-box">
+		<form action = "" method = "POST">
+			{% csrf_token %}
+		      <div class="input-form">
+		        <h2 class="input-header">Details</h2>
+		        <div class="data-input-area">
+		          <label>Day of delivery</label>
+		          <select name="day">
+		            <option value="1">Monday</option>
+		            <option value="2">Tuesday</option>
+		            <option value="3">Wednesday</option>
+		            <option value="4">Thursday</option>
+		            <option value="5">Friday</option>
+		            <option value="6">Saturday</option>
+		            <option value="7">Sunday</option>
+		          </select>
+		        </div>
+		        <div class="data-input-area">
+		          <label>Delivery agent feedback</label>
+		          <select name="feedback">
+		            <option value="1">1</option>
+		            <option value="2">2</option>
+		            <option value="3">3</option>
+		            <option value="4">4</option>
+		            <option value="5">5</option>
+		          </select>
+		        </div>
+		        <div class="data-input-area">
+		          <label>Delivery agent's leave record</label>
+		          <select name="leave_record">
+		            <option value="10">Never</option>
+		            <option value="11">Rarely</option>
+		            <option value="12">Occasionaly</option>
+		          </select>
+		        </div>
+		        <div class="data-input-area">
+		          <label>Delivery agent's shift</label>
+		          <select name="shift">
+		            <option value="13">Day</option>
+		            <option value="14">Night</option>
+		          </select>
+		        </div>
+		        <div class="data-input-area">
+		          <label>Vehicle condition</label>
+		          <select name="vehicle_condition">
+		            <option value="15">Good</option>
+		            <option value="16">Bad</option>
+		          </select>
+		        </div>
+		        <div class="data-input-area">
+		          <label>Route traffic condition</label>
+		          <select name="traffic_condition">
+		            <option value="15">Good</option>
+		            <option value="16">Bad</option>
+		          </select>
+		        </div>
+		        <div class="data-input-area">
+		          <label>Road condition</label>
+		          <select name="road_condition">
+		            <option value="15">Good</option>
+		            <option value="16">Bad</option>
+		          </select>
+		        </div>
+		        <button class="btn-submit" id="submitButton">Submit</button>
+		      </div>
+		</form>
+		<div class="result-area" id="result">{{result}}</div>
+	</div>
+
+{% endblock content %}

@@ -1,0 +1,63 @@
+/* body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    background: transparent;
+  } */
+  
+   .input-box {
+    min-width: 300px;
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .input-form {
+    display: block;
+  }
+
+  .input-header {
+    text-align: center;
+    font-size: 30px;
+    color: #719e77;
+  }
+  .data-input-area {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 0px;
+  }
+  .data-input-area > label {
+    font-size: 14px;
+  }
+  .data-input-area > select {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .btn-submit {
+    font-size: 14px;
+    font-weight: bold;
+    color: #719e77;
+    background-color: #2f2f2f;
+    padding: 5px;
+    width: 100%;
+    margin: 20px 0px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .btn-submit:hover {
+    transition: all 1s;
+    color: #f2f2f2;
+    background-color: #719e77;
+    cursor: pointer;
+  }
+  
+  .result-area {
+    display: block;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    color: #1f1f1f;
+    min-height: 20px;
+    text-align: center;
+  }
