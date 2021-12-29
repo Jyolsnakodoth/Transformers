@@ -8,7 +8,7 @@ A website where a user can login and view data using an AI-ML model that predict
 * Route traffic condition 
 * Road condition
 -----
-
+## Django setup
 Step1 : pip install -r requirements.txt
 
 Step2 : python manage.py makemigrations
