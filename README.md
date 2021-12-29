@@ -8,6 +8,9 @@ A website where a user can login and view data using an AI-ML model that predict
 * Route traffic condition 
 * Road condition
 -----
+
 Step1 : pip install -r requirements.txt
 
-Step2 : 
+Step2 : python manage.py makemigrations
+
+Step3 : python manage.py migrate
